@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using HB.RestAPI.Core.Models;
 using MongoDB.Driver;
 
 namespace HB.RestAPI.Core
@@ -14,6 +15,6 @@ namespace HB.RestAPI.Core
         /// Gets the collection object which defines the
         /// data base.
         /// </summary>
-        IMongoCollection<WeatherForecast> GetDataNodeCollection();
+        IMongoCollection<ApplicationDataContainer> GetDataNodeCollection();
     }
 }

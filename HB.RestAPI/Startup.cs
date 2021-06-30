@@ -12,8 +12,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HB.RestAPI.Core;
+using HB.RestAPI.Core.Models;
 using HB.RestAPI.Core.Services;
 using Microsoft.Extensions.Options;
+using MongoDB.Bson.Serialization;
 
 namespace HB.RestAPI
 {
@@ -34,6 +36,12 @@ namespace HB.RestAPI
             services.Configure<DataBaseSettings>(Configuration);
 
             services.AddTransient<IDbCollectionServices,DataNodeCollectionServices>();
+
+            BsonClassMap.RegisterClassMap<DataNode>(cm =>
+            {
+                cm.MapMember(dataNode => dataNode.EntityType);
+                cm.MapMember(dataNode => dataNode.RawData);
+            });
 
 
             services.AddControllers();

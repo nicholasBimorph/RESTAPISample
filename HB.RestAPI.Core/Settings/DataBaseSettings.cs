@@ -28,7 +28,9 @@ namespace HB.RestAPI.Core
 
             this.CollectionName = "DataNodeCollection";
 
-            this.ConnectionString = AddingNewEventArgs your connection string!;
+            //mongodb+srv://<username>:<password>@bimorphcluster.pw37o.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+            this.ConnectionString = "mongodb+srv://nicholasrawitscher:1234@bimorphcluster.pw37o.mongodb.net/HBREST?retryWrites=true&w=majority";
         }
 
       

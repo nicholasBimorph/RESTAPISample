@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using HB.RestAPI.Core.Models;
 using MongoDB.Driver;
 
 namespace HB.RestAPI.Core.Services
@@ -13,7 +14,7 @@ namespace HB.RestAPI.Core.Services
     /// </summary>
     public class DataNodeCollectionServices : IDbCollectionServices
     {
-        private readonly IMongoCollection<WeatherForecast> _dataNodes;
+        private readonly IMongoCollection<ApplicationDataContainer> _dataNodes;
 
         /// <summary>
         /// Construct a <see cref="DataNodeCollectionServices"/>.
@@ -25,16 +26,16 @@ namespace HB.RestAPI.Core.Services
         }
 
         /// <summary>
-        /// This method will add the <paramref name="weatherForecast"/>
+        /// This method will add the <paramref name="applicationDataContainer"/>
         /// to the Mongo DB, as an async HTTP POST request by the controller.
         /// </summary>
-        public async Task<WeatherForecast> Create(WeatherForecast weatherForecast)
+        public async Task<ApplicationDataContainer> Create(ApplicationDataContainer applicationDataContainer)
         {
-          var task =  _dataNodes.InsertOneAsync(weatherForecast);
+          var task =  _dataNodes.InsertOneAsync(applicationDataContainer);
 
           await task;
 
-          return weatherForecast;
+          return applicationDataContainer;
         }
     }
 }
