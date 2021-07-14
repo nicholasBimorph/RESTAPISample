@@ -20,7 +20,6 @@ namespace HB.RestAPI.Core.Models
         /// </summary>
         public string EntityType { get; set; }
 
-
         [BsonConstructor]
         public DataNode(string rawData, Type entityType)
         {

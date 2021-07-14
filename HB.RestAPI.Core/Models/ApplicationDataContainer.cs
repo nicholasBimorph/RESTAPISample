@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using HB.RestAPI.Core.Services;
+using HB.RestAPI.Core.Types;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
@@ -29,6 +31,7 @@ namespace HB.RestAPI.Core.Models
             this.ApplicationData = applicationData;
 
             this.ProjectStream = projectStream;
+
         }
 
         public ApplicationDataContainer(){}

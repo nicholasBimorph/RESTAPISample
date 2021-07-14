@@ -18,14 +18,14 @@ namespace HB.RestAPI.Controllers
     /// </summary>
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class ApplicationDataController : ControllerBase
     {
         private readonly IDbCollectionServices _dbCollectionServices;
 
         /// <summary>
-        /// Construct a <see cref="WeatherForecastController"/>.
+        /// Construct a <see cref="ApplicationDataController"/>.
         /// </summary>
-        public WeatherForecastController(IDbCollectionServices dbCollectionServices)
+        public ApplicationDataController(IDbCollectionServices dbCollectionServices)
         {
             _dbCollectionServices = dbCollectionServices;
         }

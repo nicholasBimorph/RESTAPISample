@@ -41,3 +41,4 @@ C:\Users\NicholasRawitscher\Documents\HB\Workshops\HB.RestAPI\HB.RestAPI\bin\Deb
 C:\Users\NicholasRawitscher\Documents\HB\Workshops\HB.RestAPI\HB.RestAPI\bin\Debug\net5.0\runtimes\linux\native\libmongocrypt.so
 C:\Users\NicholasRawitscher\Documents\HB\Workshops\HB.RestAPI\HB.RestAPI\bin\Debug\net5.0\runtimes\osx\native\libmongocrypt.dylib
 C:\Users\NicholasRawitscher\Documents\HB\Workshops\HB.RestAPI\HB.RestAPI\bin\Debug\net5.0\runtimes\win\native\mongocrypt.dll
+C:\Users\NicholasRawitscher\Documents\HB\Workshops\HB.RestAPI\HB.RestAPI\bin\Debug\net5.0\Newtonsoft.Json.dll
