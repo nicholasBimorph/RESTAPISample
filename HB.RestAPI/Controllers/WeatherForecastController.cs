@@ -20,32 +20,6 @@ namespace HB.RestAPI.Controllers
     [Route("[controller]")]
     public class ApplicationDataController : ControllerBase
     {
-        private readonly IDbCollectionServices _dbCollectionServices;
-
-        /// <summary>
-        /// Construct a <see cref="ApplicationDataController"/>.
-        /// </summary>
-        public ApplicationDataController(IDbCollectionServices dbCollectionServices)
-        {
-            _dbCollectionServices = dbCollectionServices;
-        }
-
-        /// <summary>
-        /// and HTTP POST method to add the <paramref name="applicationDataContainer"/> object
-        /// in the data base.
-        /// </summary>
-        /// <param name="applicationDataContainer"></param>
-        /// <returns></returns>
-        [HttpPost(Name = "CreateEntry")]
-        [ProducesResponseType(StatusCodes.Status201Created)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Create(ApplicationDataContainer applicationDataContainer)
-        {
-           var task = await _dbCollectionServices.Create(applicationDataContainer);
-
-           return this.CreatedAtRoute("CreateEntry", task);
-
-        }
-       
+        
     }
 }
