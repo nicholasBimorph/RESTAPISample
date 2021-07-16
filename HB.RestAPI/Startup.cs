@@ -11,6 +11,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HB.RestAPI.Core.Interfaces;
+using HB.RestAPI.Core.Services;
+using HB.RestAPI.Core.Settings;
 using Microsoft.Extensions.Options;
 using MongoDB.Bson.Serialization;
 
@@ -28,7 +31,12 @@ namespace HB.RestAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-          
+            services.Configure<MongoDbSettings>(Configuration);
+
+            services.AddSingleton<IDbClient, MongoDbClient>();
+
+            services.AddSingleton<IDbCollectionServices, ApplicationDataContainerServices>();
+
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
