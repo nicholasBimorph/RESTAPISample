@@ -13,7 +13,7 @@ namespace HB.RestAPI.Core.Types
 
         public int [][] FaceIndexes { get; set; }
 
-        public double[][] VertexColors { get; set; }
+        public int[][] VertexColors { get; set; }
 
         public IList<Property> Properties { get; set; }
 
@@ -22,7 +22,7 @@ namespace HB.RestAPI.Core.Types
         public HbMesh(
             double[][] vertices, 
             int [][] faceIndexes, 
-            double[][] vertexColors = null,
+            int[][] vertexColors = null,
             IList<Property> properties = null)
         {
             this.Vertices = vertices;

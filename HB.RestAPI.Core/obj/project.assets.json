@@ -821,23 +821,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\NicholasRawitscher\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\nicho\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NicholasRawitscher\\Documents\\HB\\Workshops\\HB.RestAPI\\HB.RestAPI.Core\\HB.RestAPI.Core.csproj",
+      "projectUniqueName": "C:\\Users\\nicho\\Documents\\Bimorph\\Clients\\HB\\Workshops\\RESTAPISample\\HB.RestAPI.Core\\HB.RestAPI.Core.csproj",
       "projectName": "HB.RestAPI.Core",
-      "projectPath": "C:\\Users\\NicholasRawitscher\\Documents\\HB\\Workshops\\HB.RestAPI\\HB.RestAPI.Core\\HB.RestAPI.Core.csproj",
-      "packagesPath": "C:\\Users\\NicholasRawitscher\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NicholasRawitscher\\Documents\\HB\\Workshops\\HB.RestAPI\\HB.RestAPI.Core\\obj\\",
+      "projectPath": "C:\\Users\\nicho\\Documents\\Bimorph\\Clients\\HB\\Workshops\\RESTAPISample\\HB.RestAPI.Core\\HB.RestAPI.Core.csproj",
+      "packagesPath": "C:\\Users\\nicho\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nicho\\Documents\\Bimorph\\Clients\\HB\\Workshops\\RESTAPISample\\HB.RestAPI.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\NicholasRawitscher\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nicho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -892,7 +893,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.205\\RuntimeIdentifierGraph.json"
       }
     }
   }

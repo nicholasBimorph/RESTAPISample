@@ -6,3 +6,12 @@ C:\Users\NicholasRawitscher\Documents\HB\Workshops\HB.RestAPI\HB.RestAPI.Core\ob
 C:\Users\NicholasRawitscher\Documents\HB\Workshops\HB.RestAPI\HB.RestAPI.Core\obj\Debug\netstandard2.0\HB.RestAPI.Core.csproj.CoreCompileInputs.cache
 C:\Users\NicholasRawitscher\Documents\HB\Workshops\HB.RestAPI\HB.RestAPI.Core\obj\Debug\netstandard2.0\HB.RestAPI.Core.dll
 C:\Users\NicholasRawitscher\Documents\HB\Workshops\HB.RestAPI\HB.RestAPI.Core\obj\Debug\netstandard2.0\HB.RestAPI.Core.pdb
+C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI.Core\bin\Debug\netstandard2.0\HB.RestAPI.Core.deps.json
+C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI.Core\bin\Debug\netstandard2.0\HB.RestAPI.Core.dll
+C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI.Core\bin\Debug\netstandard2.0\HB.RestAPI.Core.pdb
+C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI.Core\obj\Debug\netstandard2.0\HB.RestAPI.Core.csprojAssemblyReference.cache
+C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI.Core\obj\Debug\netstandard2.0\HB.RestAPI.Core.AssemblyInfoInputs.cache
+C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI.Core\obj\Debug\netstandard2.0\HB.RestAPI.Core.AssemblyInfo.cs
+C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI.Core\obj\Debug\netstandard2.0\HB.RestAPI.Core.csproj.CoreCompileInputs.cache
+C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI.Core\obj\Debug\netstandard2.0\HB.RestAPI.Core.dll
+C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI.Core\obj\Debug\netstandard2.0\HB.RestAPI.Core.pdb

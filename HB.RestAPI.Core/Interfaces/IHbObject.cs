@@ -7,7 +7,6 @@ namespace HB.RestAPI.Core.Interfaces
 {
     public interface IHbObject
     {
-
         IList<Property> Properties { get; }
     }
 }
