@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 using HB.RestAPI.Core.Interfaces;
 using Newtonsoft.Json;
@@ -27,6 +28,25 @@ namespace HB.RestAPI.Core.Services
                 //this needs to be enabled for serializing interfaces
                 TypeNameHandling = TypeNameHandling.All 
             };
+        }
+
+
+        public string SerializeToServer<T>(T data)
+        {
+            string serialized = JsonConvert.SerializeObject(data, Formatting);
+
+            return serialized;
+
+            //try
+            //{
+            //    string serialized = JsonConvert.SerializeObject(data, Formatting);
+
+            //    return serialized;
+            //}
+            //catch (Exception e)
+            //{
+            //    throw new SerializationException(e.Message, e.InnerException);
+            //}
         }
 
 

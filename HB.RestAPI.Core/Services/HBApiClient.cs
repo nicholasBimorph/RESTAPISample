@@ -4,12 +4,18 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using HB.RestAPI.Core.Interfaces;
 using HB.RestAPI.Core.Models;
 
 namespace HB.RestAPI.Core.Services
 {
     public class HBApiClient
     {
+        private readonly ISerializer _serializer;
+        public HBApiClient(ISerializer serializer)
+        {
+            _serializer = serializer;
+        }
         /// <summary>
         /// Posts the <paramref name="applicationDataContainer" /> to
         /// the SybSync API web server.
@@ -22,9 +28,7 @@ namespace HB.RestAPI.Core.Services
         /// Returns the unique identifier of the <paramref name="applicationDataContainer" />.
         /// Use this Id to fetch the object back when needed.
         /// </returns>
-        public async Task<string> AsyncPostRequest(
-            string url,
-            ApplicationDataContainer applicationDataContainer)
+        public async Task<string> AsyncPostRequest(string url, ApplicationDataContainer applicationDataContainer)
         {
             string serializedData = _serializer.SerializeToServer(applicationDataContainer);
 

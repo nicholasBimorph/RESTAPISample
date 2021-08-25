@@ -12,6 +12,12 @@ namespace HB.RestAPI.Core.Interfaces
         /// </summary>
         string ContentType { get; }
 
+        /// <summary>
+        /// Serializes the given <paramref name="data" />
+        /// to the server.
+        /// </summary>
+        string SerializeToServer<T>(T data);
+
         string Serialize( IHbObject data);
 
         T Deserialize<T>(string json);
