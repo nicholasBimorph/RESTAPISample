@@ -10,4 +10,8 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /y /d &quot;$(ProjectDir)$(OutDir)&quot; &quot;%25AppData%25\Grasshopper\Libraries\HbConnector&quot;" />
+  </Target>
+
 </Project>
