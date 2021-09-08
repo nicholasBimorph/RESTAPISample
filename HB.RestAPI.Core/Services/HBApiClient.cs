@@ -11,11 +11,22 @@ namespace HB.RestAPI.Core.Services
 {
     public class HBApiClient
     {
+        public event EventHandler<string> RequestFinished;
+
         private readonly ISerializer _serializer;
+
         public HBApiClient(ISerializer serializer)
         {
             _serializer = serializer;
         }
+
+        private void OnRequestFinished(string response)
+        {
+            var handler = this.RequestFinished;
+
+            handler?.Invoke(this, response);
+        }
+
         /// <summary>
         /// Posts the <paramref name="applicationDataContainer" /> to
         /// the SybSync API web server.
@@ -64,6 +75,9 @@ namespace HB.RestAPI.Core.Services
               
             }
 
+
+
+            this.OnRequestFinished(responseString);
 
             return responseString;
         }

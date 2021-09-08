@@ -23,10 +23,10 @@ namespace HB.RestAPI.Core.Models
         /// <summary>
         /// The collected data from an applciation.
         /// </summary>
-        public List<DataNode> ApplicationData { get; set; }
+        public IList<DataNode> ApplicationData { get; set; }
 
         [BsonConstructor]
-        public ApplicationDataContainer(List<DataNode> applicationData, string projectStream)
+        public ApplicationDataContainer(IList<DataNode> applicationData, string projectStream)
         {
             this.ApplicationData = applicationData;
 
