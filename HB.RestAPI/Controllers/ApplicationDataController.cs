@@ -61,9 +61,29 @@ namespace HB.RestAPI.Controllers
         {
             var dbCollectionServicesResult = await _dbCollectionServices.DeleteAllEntries();
 
-            return this.StatusCode(200, dbCollectionServicesResult);
+            
+            return this.Ok(dbCollectionServicesResult);
 
         }
+
+        /// <summary>
+        /// Deletes all the  existing <see cref="ProjectStream"/>'s
+        /// in the data base.
+        /// </summary>
+        /// <returns></returns>
+        [Route("[action]")]
+        [HttpGet]
+        [ActionName("GetLatest")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> GetLatest()
+        {
+            var applicationDataContainer = await _dbCollectionServices.GetLatest();
+
+            return this.Ok(applicationDataContainer);
+
+        }
+
 
     }
 }

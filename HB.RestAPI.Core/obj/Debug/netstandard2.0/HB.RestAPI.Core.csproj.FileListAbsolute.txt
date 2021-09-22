@@ -14,5 +14,5 @@ C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI.C
 C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI.Core\obj\Debug\netstandard2.0\HB.RestAPI.Core.csproj.CoreCompileInputs.cache
 C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI.Core\obj\Debug\netstandard2.0\HB.RestAPI.Core.dll
 C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI.Core\obj\Debug\netstandard2.0\HB.RestAPI.Core.pdb
-C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI.Core\obj\Debug\netstandard2.0\HB.RestAPI.Core.csproj.AssemblyReference.cache
 C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI.Core\obj\Debug\netstandard2.0\HB.RestAPI.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI.Core\obj\Debug\netstandard2.0\HB.RestAPI.Core.csproj.AssemblyReference.cache

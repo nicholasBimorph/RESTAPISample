@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HB.RestAPI.Core.Models;
@@ -38,6 +39,24 @@ namespace HB.RestAPI.Core.Services
           await task;
 
           return applicationDataContainer;
+        }
+
+        /// <summary>
+        /// Get the most recent uploaded <see cref="ApplicationDataContainer"/>
+        /// to the HB REST API data base.
+        /// </summary>
+        /// <returns></returns>
+        public async Task<ApplicationDataContainer> GetLatest()
+        {
+            var filter = _emptyFilter;
+
+            var foundContainers = await _dataNodes.FindAsync(filter);
+
+            var list = await foundContainers.ToListAsync();
+
+            var latestContainer = list.OrderByDescending(d => d.UploadTime).FirstOrDefault();
+
+            return latestContainer;
         }
 
         /// <summary>

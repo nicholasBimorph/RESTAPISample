@@ -31,9 +31,14 @@ namespace HB.RestAPI.Core.Types
 
             this.VertexColors = vertexColors;
 
-            this.Properties = properties;
+            this.Properties = properties ?? new List<Property>();
 
         }
+
+        /// <summary>
+        /// WARNING: DO NOT REMOVE NEEDED FOR JSON
+        /// </summary>
+        public HbMesh(){}
 
     }
 }

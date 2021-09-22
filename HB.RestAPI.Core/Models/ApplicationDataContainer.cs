@@ -25,7 +25,7 @@ namespace HB.RestAPI.Core.Models
         /// </summary>
         public IList<DataNode> ApplicationData { get; set; }
 
-        // TODO: DateTime
+        public DateTime UploadTime { get; set; }
 
         [BsonConstructor]
         public ApplicationDataContainer(IList<DataNode> applicationData, string projectStream)
@@ -34,6 +34,7 @@ namespace HB.RestAPI.Core.Models
 
             this.ProjectStream = projectStream;
 
+            this.UploadTime = DateTime.Now;
 
         }
 

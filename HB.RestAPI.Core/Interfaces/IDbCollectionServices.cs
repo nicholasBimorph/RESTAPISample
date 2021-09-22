@@ -17,6 +17,8 @@ namespace HB.RestAPI.Core
         /// </summary>
         Task<ApplicationDataContainer> Create(ApplicationDataContainer applicationDataContainer);
 
+        Task<ApplicationDataContainer> GetLatest();
+
         Task<bool> DeleteAllEntries();
     }
 
