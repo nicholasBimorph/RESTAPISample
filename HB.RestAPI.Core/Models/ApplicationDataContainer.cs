@@ -25,12 +25,15 @@ namespace HB.RestAPI.Core.Models
         /// </summary>
         public IList<DataNode> ApplicationData { get; set; }
 
+        // TODO: DateTime
+
         [BsonConstructor]
         public ApplicationDataContainer(IList<DataNode> applicationData, string projectStream)
         {
             this.ApplicationData = applicationData;
 
             this.ProjectStream = projectStream;
+
 
         }
 

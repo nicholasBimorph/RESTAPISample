@@ -15,6 +15,7 @@ namespace HB.RestAPI.Core.Services
     public class DataNodeCollectionServices : IDbCollectionServices
     {
         private readonly IMongoCollection<ApplicationDataContainer> _dataNodes;
+        private readonly FilterDefinition<ApplicationDataContainer> _emptyFilter;
 
         /// <summary>
         /// Construct a <see cref="DataNodeCollectionServices"/>.
@@ -23,6 +24,7 @@ namespace HB.RestAPI.Core.Services
         public DataNodeCollectionServices(IDbClient dbClient)
         {
             _dataNodes = dbClient.GetDataNodeCollection();
+            _emptyFilter = Builders<ApplicationDataContainer>.Filter.Empty;
         }
 
         /// <summary>
@@ -36,6 +38,29 @@ namespace HB.RestAPI.Core.Services
           await task;
 
           return applicationDataContainer;
+        }
+
+        /// <summary>
+        /// Deletes all entries from the SybariteSync data base.
+        /// </summary>
+        /// <returns>
+        /// <see langword="true" /> if all the <see cref="ProjectStream" /> where
+        /// deleted succesfully , otherwise <see langword="false" />.
+        /// </returns>
+        public async Task<bool> DeleteAllEntries()
+        {
+            try
+            {
+                var deleteResult = await _dataNodes.DeleteManyAsync(_emptyFilter);
+
+                bool isAcknowledged = deleteResult.IsAcknowledged;
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
     }
 }

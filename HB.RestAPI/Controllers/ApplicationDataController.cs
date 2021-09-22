@@ -46,6 +46,24 @@ namespace HB.RestAPI.Controllers
            return this.CreatedAtRoute("CreateEntry", task);
 
         }
-       
+
+        /// <summary>
+        /// Deletes all the  existing <see cref="ProjectStream"/>'s
+        /// in the data base.
+        /// </summary>
+        /// <returns></returns>
+        [Route("[action]")]
+        [HttpDelete]
+        [ActionName("DeleteAllContentInDb")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> DeleteAllContentInDb()
+        {
+            var dbCollectionServicesResult = await _dbCollectionServices.DeleteAllEntries();
+
+            return this.StatusCode(200, dbCollectionServicesResult);
+
+        }
+
     }
 }
