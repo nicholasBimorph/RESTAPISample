@@ -12,5 +12,7 @@ namespace HB.RestAPI.Core.Settings
     {
 
         public const string AsyncPostEndPoint = "https://localhost:44313/ApplicationData";
+
+        public const string GetLatestEndPoint = "https://localhost:44313/ApplicationData/GetLatest";
     }
 }

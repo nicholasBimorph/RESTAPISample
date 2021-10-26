@@ -72,7 +72,7 @@ namespace HB.RestAPI.Core.Services
             }
             catch (Exception e)
             {
-              
+                this.OnRequestFinished(responseString);
             }
 
 
@@ -81,5 +81,44 @@ namespace HB.RestAPI.Core.Services
 
             return responseString;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="url">
+        /// The Url endpoint to perform the request to
+        /// </param>
+        public async Task<string> GetRequest(string url)
+        {
+            var request = WebRequest.Create(url);
+
+            request.ContentType = _serializer.ContentType;
+
+            request.Method = "GET";
+
+            string responseString = null;
+
+            try
+            {
+                // Here is where the connection with the SybSync API happens.
+                var response = await request.GetResponseAsync();
+
+                using (var streamReader = new StreamReader(response.GetResponseStream()))
+                {
+                    responseString = await streamReader.ReadToEndAsync();
+                }
+            }
+            catch (Exception e)
+            {
+
+                this.OnRequestFinished(responseString);
+            }
+
+            this.OnRequestFinished(responseString);
+
+            return responseString;
+        }
+
+
     }
 }

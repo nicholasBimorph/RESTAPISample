@@ -5,13 +5,12 @@ using HB.RestAPI.Core.Models;
 
 namespace HB.RestAPI.Core.Interfaces
 {
-    public interface IHbFactory<T>
+    public interface IHbFactory
     {
-
         /// <summary>
         /// Creates a  <see cref="IHbObject"/>
         /// which is stored in the <paramref name="dataNode"/>.
         /// </summary>
-        IList<T> Create(IList<DataNode> dataNode);
+        IList<IHbObject> Create(IList<DataNode> dataNode);
     }
 }

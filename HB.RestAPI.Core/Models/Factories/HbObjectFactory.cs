@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using HB.RestAPI.Core.Interfaces;
+using HB.RestAPI.Core.Models.Types;
 using HB.RestAPI.Core.Types;
 
 namespace HB.RestAPI.Core.Models
@@ -9,7 +10,7 @@ namespace HB.RestAPI.Core.Models
     /// <summary>
     /// A class that creates <see cref="IHbObject"/>'s.
     /// </summary>
-    public class HbObjectFactory : IHbFactory<IHbObject>
+    public class HbObjectFactory : IHbFactory
     {
         private readonly ISerializer _serializer;
 
@@ -43,7 +44,14 @@ namespace HB.RestAPI.Core.Models
                     hbObjects.Add(hbMesh);
                 }
 
-                throw new NotSupportedException();
+                else if (storageType == typeof(HbArea))
+                {
+                    var hbMesh = _serializer.Deserialize<HbArea>(rawData);
+
+                    hbObjects.Add(hbMesh);
+                }
+
+                else throw new NotSupportedException($"The{this.GetType().Name} does not support {nameof(storageType.Name)}!");
             }
 
             return hbObjects;
