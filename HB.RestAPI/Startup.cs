@@ -31,6 +31,8 @@ namespace HB.RestAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
+
             services.AddSingleton<IDbClient, MongoDbClient>();
 
             services.Configure<DataBaseSettings>(Configuration);
@@ -54,6 +56,13 @@ namespace HB.RestAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            // global CORS policy
+            app.UseCors(x => x
+                             .AllowAnyMethod() // allows all HTTP requests of this API to be consumed by a client.
+                             .AllowAnyHeader()
+                             .SetIsOriginAllowed(origin => true) // allows any client to make requests to this API
+                             .AllowCredentials());
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

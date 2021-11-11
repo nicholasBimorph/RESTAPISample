@@ -20,12 +20,20 @@ namespace HB.RestAPI.Core.Models
         /// </summary>
         public string EntityType { get; set; }
 
+        /// <summary>
+        /// The name of the concrete <see cref="Type"/>
+        /// this <see cref="DataNode"/> stores.
+        /// </summary>
+        public string EntityName { get; set; }
+
         [BsonConstructor]
         public DataNode(string rawData, Type entityType)
         {
             this.RawData = rawData;
 
             this.EntityType = entityType.ToString();
+
+            this.EntityName = entityType.Name;
         }
 
         public DataNode(){}

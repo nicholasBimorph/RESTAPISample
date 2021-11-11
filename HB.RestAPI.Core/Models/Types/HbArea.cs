@@ -8,7 +8,7 @@ namespace HB.RestAPI.Core.Models.Types
 {
     public class HbArea : IHbObject
     {
-
+        
         public IList<Property> Properties { get; }
 
         /// <summary>

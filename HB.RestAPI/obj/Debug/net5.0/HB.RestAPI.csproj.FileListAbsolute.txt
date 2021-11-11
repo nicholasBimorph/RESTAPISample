@@ -70,6 +70,7 @@ C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI\b
 C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI\bin\Debug\net5.0\runtimes\win\native\mongocrypt.dll
 C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI\bin\Debug\net5.0\HB.RestAPI.Core.dll
 C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI\bin\Debug\net5.0\HB.RestAPI.Core.pdb
+C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI\obj\Debug\net5.0\HB.RestAPI.csproj.AssemblyReference.cache
 C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI\obj\Debug\net5.0\HB.RestAPI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI\obj\Debug\net5.0\HB.RestAPI.AssemblyInfoInputs.cache
 C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI\obj\Debug\net5.0\HB.RestAPI.AssemblyInfo.cs
@@ -85,4 +86,3 @@ C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI\o
 C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI\obj\Debug\net5.0\ref\HB.RestAPI.dll
 C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI\obj\Debug\net5.0\HB.RestAPI.pdb
 C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI\obj\Debug\net5.0\HB.RestAPI.genruntimeconfig.cache
-C:\Users\nicho\Documents\Bimorph\Clients\HB\Workshops\RESTAPISample\HB.RestAPI\obj\Debug\net5.0\HB.RestAPI.csproj.AssemblyReference.cache
